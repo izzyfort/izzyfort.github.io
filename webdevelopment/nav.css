@@ -1,0 +1,23 @@
+/*take bullets away*/
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*make horizontal*/
+nav ul li {
+  display: inline-block;          
+  margin-right: 100px;             
+  padding: 10px 15px;             
+  border: 2px solid #000000;      
+  border-radius: 4px;             
+  background-color: #D9E8FF;  
+}
+
+/*customize links*/
+nav ul li a {        
+  color: #000000;                 
+  font-weight: bold;              
+}
+
