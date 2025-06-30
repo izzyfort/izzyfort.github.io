@@ -1,3 +1,8 @@
+nav {
+  background-color: #EAF3FB ;
+  padding: 30px 0;
+}
+
 /* take bullets away, center */
 nav ul {
   list-style-type: none;
@@ -6,6 +11,7 @@ nav ul {
   display: flex;
   justify-content: center; 
   align-items: center;
+  gap: 40px
 }
 
 /* main navigation styling */
@@ -13,33 +19,41 @@ nav ul li {
   position: relative;   
   display: inline-block;          
   margin: 0 20px;                 
-  padding: 10px 15px;             
-  border: 2px solid #000000;      
-  border-radius: 8px;             
-  background-color: #D9E8FF;  
+  padding: 12px 24px;             
+  border: 1px solid #cfe4f3;       
+  border-radius: 12px;           
+  background-color: #f9fcff;    
 }
 
 /* customize links */
 nav ul li a {        
-  color: #000000;                 
+  color: #497BAE;                 
   font-weight: bold;
   display: block;
+  text-align: center;
+  font-size: 16px;
 }
 
 /* hover effect for top links */
 nav ul li a:hover {
-  background-color: #BCDFFF;
+  background-color: #cfe4f3;        
+  border-color: #497BAE; 
 }
 
 /* position drop-down menu */
 nav ul li ul {
   position: absolute;
   top: 100%;
-  left: -47px;
+  left: 50%;
+  transform: translateX(-50%); /*https://www.w3schools.com/cssref/func_translatex.php*/
   display: none;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  background-color: #f9fcff;
+  border: 2px solid #cfe4f3;
+  border-radius: 12px;
+   width: 80px; 
 }
 
 /* show drop-down on hover */
@@ -51,22 +65,23 @@ nav ul li:hover > ul {
 nav ul li ul li {
   display: block;
   margin: 0;
-  padding: 10px 15px;
-  border: 2px solid #000000;
-  border-radius: 8px;
-  background-color: #D9E8FF;
-  min-width: 150px;
+  padding: 6px 10px;
+  background-color: #f9fcff;
 }
 
 /* style drop-down links */
 nav ul li ul li a {
-  color: #000000;
-  font-weight: bold;
+  color: #497BAE;
   display: block;
   text-align: center;
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 8px;
 }
 
 /* hover effect for dropdown links */
 nav ul li ul li a:hover {
   background-color: #BCDFFF;
+  background-color: #cfe4f3;
+  border-radius: 12px;
 }
