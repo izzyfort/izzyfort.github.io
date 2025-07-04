@@ -1,31 +1,32 @@
 .nav-bar {
   background-color: #B0D4F1;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .nav-bar ul.desktop-menu {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 8px 0 12px 0;
   display: flex;
   justify-content: center;
-  gap: 130px; 
+  gap: 100px;
   flex-wrap: wrap;
 }
 
 .nav-bar ul.desktop-menu li {
   position: relative;
-  padding: 16px 28px;
   background: #f9fcff;
-  border-radius: 14px;
-  border: 1px solid #497BAE;
+  border: 2px solid #B0D4F1;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  padding: 6px 14px;
 }
 
 .nav-bar ul.desktop-menu li a {
   text-decoration: none;
   color: #497BAE;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   display: block;
   font-family: 'Montserrat', sans-serif;
 }
@@ -40,7 +41,7 @@
   border: 1px solid #497BAE;
   border-radius: 10px;
   padding: 0;
-  width: 120px; 
+  width: 120px;
   z-index: 100;
 }
 
@@ -55,11 +56,11 @@
 
 .nav-bar ul.desktop-menu li ul li a {
   color: #497BAE;
-  font-size: 14px; 
-  padding: 6px 0; 
+  font-size: 14px;
+  padding: 6px 0;
 }
 
 .nav-bar ul.desktop-menu li ul li a:hover {
   background-color: #cfe4f3;
-  border-radius: 6px; 
+  border-radius: 6px;
 }
