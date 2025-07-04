@@ -1,0 +1,66 @@
+.nav-bar {
+  background-color: #B0D4F1;
+  padding: 10px 0;
+}
+
+.nav-bar ul.desktop-menu {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+.nav-bar ul.desktop-menu li {
+  position: relative;
+  background: #f9fcff;
+  border: 2px solid #B0D4F1;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  padding: 6px 14px;
+}
+
+.nav-bar ul.desktop-menu li a {
+  text-decoration: none;
+  color: #497BAE;
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-bar ul.desktop-menu li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f9fcff;
+  border: 1px solid #497BAE;
+  border-radius: 10px;
+  padding: 0;
+  width: 120px;
+  z-index: 100;
+}
+
+.nav-bar ul.desktop-menu li:hover > ul {
+  display: block;
+}
+
+.nav-bar ul.desktop-menu li ul li {
+  padding: 4px 0;
+  text-align: center;
+}
+
+.nav-bar ul.desktop-menu li ul li a {
+  color: #497BAE;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.nav-bar ul.desktop-menu li ul li a:hover {
+  background-color: #cfe4f3;
+  border-radius: 6px;
+}
