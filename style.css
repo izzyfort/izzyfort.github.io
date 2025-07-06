@@ -1,15 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
   background-color: #F9FCFF;
   color: #222;
   font-size: 18px;
   line-height: 1.7;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
 }
 
 .site-header {
@@ -31,11 +26,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-logo {
-  height: 45px;
+  height: 72px;
 }
 
 .site-title h1 {
-  font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
   font-size: 43px; 
   letter-spacing: 0.5px;
@@ -43,7 +37,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-title span {
-  font-family: 'Inter', sans-serif;
   font-size: 17px;
   color: #497BAE;
   display: block;
@@ -56,11 +49,12 @@ main {
   padding: 40px 30px;
 }
 
-.about-header {
+.section-header {
   font-size: 32px;
   text-align: center;
   color: #497BAE;
   margin-bottom: 20px;
+  margin-top: 0px;
 }
 
 .about-content {
@@ -116,37 +110,35 @@ blockquote {
 }
 
 .resume {
-  margin-top: 80px;
+  background-color: #F1F7FC;
+  border: 1px solid #B0D4F1;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 60px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .resume-header-bar.full-width {
-  background-color: #B0D4F1;
-  padding: 20px;
+  background-color: transparent;
+  padding: 0;
+  margin: 40px 0 20px 0;
   text-align: center;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  box-sizing: border-box;
-  box-shadow: inset 0 -3px 5px rgba(0,0,0,0.1);
+  box-shadow: none;
+  border-bottom: 2px solid #B0D4F1;
 }
 
 .resume-header {
-  margin: 0;
-  font-size: 28px;
+  font-size: 32px;
   color: #1F4E79;
+  margin-bottom: 20px;
 }
 
-.resume-content.spaced {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 100px;
-  margin-top: 40px;
-  margin-bottom: 0;
+.resume-intro {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .resume-link {
@@ -174,6 +166,17 @@ blockquote {
   flex-shrink: 0;
 }
 
+.resume-content.spaced {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+}
+
 footer {
   text-align: center;
   padding: 30px;
@@ -192,16 +195,29 @@ footer {
   line-height: 1.6;
 }
 
-.reflection p {
-  text-indent: 32px;
-  margin: 0 auto 20px auto;
-  max-width: 1000px;
-  text-align: left;
-  line-height: 1.8;
+.reflection {
+  padding: 30px;
+  background-color: #fdfdfd;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.reflection p:first-of-type::first-letter {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #1F4E79;
+  float: left;
+  line-height: 1;
+  margin-right: -6px;
+  margin-top: 4px;
+}
+
+.reflection p:not(:first-of-type) {
+  text-indent: 2em;
 }
 
 .reflection-header {
-  font-family: 'Montserrat', sans-serif;
   font-size: 32px;
   text-align: center;
   color: #1F4E79;
@@ -221,4 +237,103 @@ footer {
 .italic-header {
   text-align: center;
   font-style: italic;
+}
+
+h3 {
+  color: #1F4E79;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-title h1 {
+    font-size: 28px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 16px;
+  }
+
+  .headshot-wrapper {
+    margin: 0 auto;
+  }
+
+  .headshot {
+    max-width: 260px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .section-header {
+    font-size: 26px;
+  }
+
+  .resume-content.spaced {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .resume-link {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .quote blockquote {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .reflection p {
+    padding: 0 16px;
+  }
+
+  .signature {
+    max-width: 200px;
+  }
+}
+
+.mobile-toggle {
+  display: none;
+  background-color: #497BAE;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+
+#menu-toggle,
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #menu-toggle,
+  .menu-icon,
+  .mobile-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-content.spaced {
+    align-items: center;
+    text-align: center;   
+  }
+
+  .resume-video,
+  .resume-link {
+    margin: 0 auto;      
+  }
 }
