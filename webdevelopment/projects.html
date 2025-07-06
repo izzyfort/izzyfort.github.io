@@ -20,21 +20,34 @@ Tested:  June 29, 2025 on Google Chrome and Safari-->
               <link rel="stylesheet" href="nav.css" type="text/css">
 </head>
 <body>
-   <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="Reflection.html">Reflection</a></li>
-      <li><a href="#contact.html">Contact</a></li>
-      <li> <a href="projects.html">Projects</a>
-        <ul>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+  <header class="site-header">
+    <div class="site-title">
+      <img src="Logo.png" alt="Logo" class="site-logo" />
+      <h1 class="site-title">Izzy Forthaus Health Sciences Portfolio</h1>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+  <label for="nav-toggle" class="nav-toggle-label">☰ Menu</label>
+
+  <ul class="desktop-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="Reflection.html">Reflection</a></li>
+    <li><a href="#contact.html">Contact</a></li>
+    <li><a href="projects.html">Projects</a>
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
   <header>
     <h1> Will Add Projects Later</h1>

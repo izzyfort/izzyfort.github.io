@@ -3,6 +3,7 @@
   padding: 10px 0;
 }
 
+/* Desktop Menu */
 .nav-bar ul.desktop-menu {
   list-style: none;
   padding: 0;
@@ -31,6 +32,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Dropdown Menu */
 .nav-bar ul.desktop-menu li ul {
   display: none;
   position: absolute;
@@ -63,4 +65,115 @@
 .nav-bar ul.desktop-menu li ul li a:hover {
   background-color: #cfe4f3;
   border-radius: 6px;
+}
+
+/*Mobile Nav*/
+@media (max-width: 768px) {
+  .nav-bar ul.desktop-menu {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .nav-bar ul.desktop-menu.show {
+    display: flex;
+  }
+
+  .mobile-toggle {
+    display: block;
+    text-align: center;
+  }
+
+  .nav-bar ul.desktop-menu li {
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .nav-bar ul.desktop-menu li ul {
+    position: static;
+    transform: none;
+    border: none;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .nav-bar ul.desktop-menu li:hover > ul {
+    display: none;
+  }
+
+  .nav-bar ul.desktop-menu li:focus-within > ul {
+    display: block;
+  }
+}
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  background-color: #497BAE;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin: 10px auto;
+  text-align: center;
+  cursor: pointer;
+  width: max-content;
+}
+
+@media (max-width: 950px) {
+  .nav-bar ul.desktop-menu {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 850px) {
+  .nav-bar ul.desktop-menu {
+    gap: 30px;
+  }
+}
+
+@media (max-width:768px) {
+  .nav-toggle-label {
+    display: block;
+  }
+
+  .nav-bar ul.desktop-menu {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label + ul.desktop-menu {
+    display: flex;
+  }
+
+  .nav-bar ul.desktop-menu li {
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .nav-bar ul.desktop-menu li ul {
+    position: static;
+    transform: none;
+    border: none;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .nav-bar ul.desktop-menu li:hover > ul {
+    display: none;
+  }
+
+  .nav-bar ul.desktop-menu li:focus-within > ul {
+    display: block;
+  }
 }
