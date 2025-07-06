@@ -315,7 +315,10 @@ h3 {
 
 #menu-toggle,
 .menu-icon {
-  display: none;
+  display: none !important;;
+}
+#menu-toggle {
+  display: none !important;  /* --- https://www.w3schools.com/css/css_important.asp --- */
 }
 
 @media (max-width: 768px) {
