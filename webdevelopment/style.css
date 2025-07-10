@@ -182,6 +182,11 @@ footer {
   font-size: 14px;
   margin-top: 40px;
   border-top: 1px solid #ccc;
+
+  background-image: url('footback.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .welcome {
@@ -512,7 +517,7 @@ main {
   border: 1px solid #B0D4F1;
   padding: 40px;
   border-radius: 12px;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 60px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
@@ -575,14 +580,11 @@ main {
   flex-wrap: wrap;
 }
 
-footer {
-  text-align: center;
-  padding: 30px;
-  background-color: #EAF3FB;
-  color: #1F4E79;
-  font-size: 14px;
-  margin-top: 40px;
-  border-top: 1px solid #ccc;
+.icon {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
 .welcome {
