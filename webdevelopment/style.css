@@ -109,11 +109,12 @@ main {
 .resume {
   background-color: #F1F7FC;
   border: 1px solid #B0D4F1;
-  padding: 40px;
+  padding: 40px !important;
   border-radius: 12px;
-  max-width: 900px;
-  margin: 60px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  max-width: 750px !important;  
+  margin: 60px auto !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05) !important;
+  width: 90% !important;
 }
 
 .resume-header-bar.full-width {
@@ -149,18 +150,27 @@ main {
   font-size: 18px;
   transition: background-color 0.3s ease;
   flex-shrink: 0;
-  margin-bottom: 40px;
+
+  display: block !important;
+  margin: 100px auto 0 auto !important;
+  text-align: center !important;
+  width: fit-content !important;
 }
 
 .resume-link:hover {
   background-color: #cfe4f3;
 }
 
+.resume-video {
+  max-width: 190px;
+  margin: 0 auto;
+}
+
 .resume-video video {
-  width: 320px;
-  max-width: 100%;
+  width: 100% !important;
+  height: auto !important;
+  display: block;
   border-radius: 12px;
-  flex-shrink: 0;
 }
 
 .resume-content.spaced {
@@ -922,3 +932,13 @@ h3 {
     page-break-inside: avoid !important;
   }
 }
+
+footer .icon {
+  transition: transform 0.3s ease;
+  cursor: pointer; 
+}
+
+footer .icon:hover {
+  transform: scale(1.4);
+}
+
