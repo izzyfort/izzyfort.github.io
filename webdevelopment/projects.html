@@ -8,59 +8,101 @@ School/Term:  University of Missouri, Summer 2025
 
 Developed: June 26, 2025
 
-Tested:  June 29, 2025 on Google Chrome and Safari-->
+Tested:  July 13, 2025 on Google Chrome and Safari-->
 
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-               <meta charset="utf-8">
-               <title>Projects></title>
-
-              <link rel="stylesheet" href= "style.css" type="text/css">
-              <link rel="stylesheet" href="nav.css" type="text/css">
-              <link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="utf-8">
+  <title>Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="nav.css" type="text/css">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
+
 <body>
-  <input type="checkbox" id="menu-toggle" />
+  <input type="checkbox" id="menu-toggle">
   <label for="menu-toggle" class="menu-icon">&#9776;</label>
 
   <header class="site-header">
     <div class="site-title">
-      <img src="Logo.png" alt="Logo" class="site-logo" />
+      <img src="Logo.png" alt="Logo" class="site-logo">
       <h1 class="site-title">Izzy Forthaus Health Sciences Portfolio</h1>
     </div>
   </header>
 
   <nav class="nav-bar">
-  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-  <label for="nav-toggle" class="nav-toggle-label">☰ Menu</label>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">☰ Menu</label>
+    <ul class="desktop-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="Reflection.html">Reflection</a></li>
+      <li><a href="#contact.html">Contact</a></li>
+      <li><a href="projects.html" class="active">Projects</a>
+        <ul>
+          <li><a href="#research-poster">Research Poster</a></li>
+          <li><a href="#policy-video">Policy Video</a></li>
+          <li><a href="#healing-room">Healing Waiting Room</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
-  <ul class="desktop-menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="Reflection.html">Reflection</a></li>
-    <li><a href="#contact.html">Contact</a></li>
-    <li><a href="projects.html">Projects</a>
-      <ul>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+  <main class="projects-main">
+    <h2 class="main-header">
+    <img src="projects-icon.png" alt="Projects Icon" class="header-icon">
+    Notable Projects
+    </h2>
 
-  <header>
-    <h1> Will Add Projects Later</h1>
-  </header>
+    <section id="research-poster" class="project-section">
+      <h3>Competency 1: Health Education</h3>
+      <h4>Postpartum Depression Literature Review Poster</h4>
+      <p>This project aimed to translate complex medical research into an accessible educational format to educate my peers about treatment options for postpartum depression (PPD) in women aged 18–35. I reviewed eight peer-reviewed studies and developed a professional research poster highlighting key findings on pharmaceutical and psychotherapy treatments. The poster focused on how different interventions affect maternal and infant health, including impacts on bonding and breastfeeding. I presented my findings to peers, explaining the research process, comparing treatment outcomes, and emphasizing the importance of patient-centered care in addressing PPD.</p>
+      <p><strong>Reflection:</strong> This experience strengthened my ability to communicate medical information clearly and effectively. Strengths of this project are my simplification of medical jargon and the amount of medical evidence used to support my points. A weakness of this project is my lack of exploration into a control group. In completing this project, I learned how to translate academic research into meaningful communication to promote health education. If I did this project again, I would further explore the control group and use more visual aids in my presentation. For this presentation, I used peer-reviewed journal articles from PUBMED, Canva, and a Mizzou research poster template.</p>
+      <img src="poster.png" alt="Postpartum Depression Research Poster" class="artifact">
+      <hr>
+    </section>
 
-  <main>
-    <!-- content-->
+    <section id="policy-video" class="project-section">
+      <h3>Competency 2: Health Policy</h3>
+      <h4>The Impact of the Fee-For-Service Payment Method on Patient Care</h4>
+      <p>This project focused on evaluating and communicating the effects of the Fee-for-Service (FFS) payment model on patient care outcomes in the U.S. healthcare system. I conducted a thorough analysis of peer-reviewed studies, government reports, and health policy reviews to assess how the FFS model impacts care quality, patient access, and healthcare costs. In the 18-minute video presentation, I advocated for more effective payment reforms by breaking down the problems with the current system and suggesting practical solutions like performance incentives and adjusted pricing structures. My goal for this project was to raise awareness of how healthcare financing models influence provider behavior, treatment decisions, and patient well-being.</p>
+      <p><strong>Reflection:</strong> One of the strengths of this project was my ability to demonstrate how policy design influences clinical outcomes and healthcare economics using evidence-based arguments. A weakness is not fully exploring the consequences of an adjusted payment system. Through this process, I learned how payment models shape all aspects of healthcare delivery and why advocacy for equitable healthcare policies is necessary. If I were to do the project differently, I would include interviews or quotes from healthcare professionals or policymakers to support my proposals. To complete this project, I used peer-reviewed articles, CMS policy reports, QuickTime video, and Google Slides.</p>
+      <video controls class="artifact">
+        <source src="ffs-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <hr>
+    </section>
+
+    <section id="healing-room" class="project-section">
+      <h3>Competency 3: Health Promotion and Design</h3>
+      <h4>The Healing Waiting Room</h4>
+      <p>This project involved designing a therapeutic healthcare waiting room using environmental psychology and health promotion strategies. The goal was to create a space that supports both patient and staff comfort, reduces anxiety, and promotes healing. I researched how lighting, sound, nature, color, seating, and design elements influence overall patient well-being. I also incorporated calming color palettes, natural light, ergonomic seating, soundproofing, nature views, and wellness-enhancing features such as fountains, music, healthy vending options, and a garden area for outdoor waiting. The final design aimed to minimize stressors, support immune health, and improve the overall experience for both patients and staff.</p>
+      <p><strong>Reflection:</strong> One of the strengths of this project was my ability to combine evidence-based research with creative design to promote a more compassionate, patient-centered environment. A weakness was the lack of a physical or digital mockup. Through this project, I learned how physical environments influence health outcomes and how intentional design can serve as a tool for health promotion. If I were to do the project differently, I would include a visual rendering or 3D model to communicate the space better. To complete the project, I used peer-reviewed articles, healthcare design standards, research from environmental psychology, Canva, and Google Slides.</p>
+      <img src="healing-room.png" alt="Healing Waiting Room Design" class="artifact">
+      <a href="healing-room-slides.pdf" target="_blank" class="btn-view-slides">View Slides (PDF)</a>
+
+      <hr>
+    </section>
   </main>
 
   <footer>
-    Izzy Forthaus | iofbmn@umsystem.edu <br>
-    © 2025 Izzy Forthaus. All rights reserved.
+    <p>
+      <img src="phone.png" alt="Phone Icon" class="icon">
+      1+888-888-8888
+    </p>
+    <p>
+      <img src="email.png" alt="Email Icon" class="icon">
+      <a href="mailto:iofbmn@umsystem.edu">Izzy Forthaus</a> | iofbmn@umsystem.edu
+    </p>
+    <p>
+      © 2025 Izzy Forthaus. All rights reserved.
+    </p>
   </footer>
 </body>
 </html>
