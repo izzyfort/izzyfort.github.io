@@ -1,10 +1,15 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
   background-color: #F9FCFF;
+  font-family: 'Inter', sans-serif;
   color: #222;
   font-size: 18px;
   line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .site-header {
@@ -30,6 +35,7 @@ body {
 }
 
 .site-title h1 {
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
   font-size: 43px; 
   letter-spacing: 0.5px;
@@ -37,6 +43,7 @@ body {
 }
 
 .site-title span {
+  font-family: 'Inter', sans-serif;
   font-size: 17px;
   color: #497BAE;
   display: block;
@@ -51,10 +58,13 @@ main {
 
 .section-header {
   font-size: 32px;
-  text-align: center;
   color: #497BAE;
   margin-bottom: 20px;
   margin-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 
 .about-content {
@@ -99,24 +109,15 @@ main {
   font-size: 26px;
 }
 
-blockquote {
-  background-color: #f0f8ff;
-  border-left: 4px solid #497BAE;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
-  font-style: italic;
-  border-radius: 8px;
-}
-
 .resume {
   background-color: #F1F7FC;
   border: 1px solid #B0D4F1;
-  padding: 40px;
+  padding: 40px !important;
   border-radius: 12px;
-  max-width: 900px;
-  margin: 60px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  max-width: 750px !important;  
+  margin: 60px auto !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05) !important;
+  width: 90% !important;
 }
 
 .resume-header-bar.full-width {
@@ -152,16 +153,26 @@ blockquote {
   font-size: 18px;
   transition: background-color 0.3s ease;
   flex-shrink: 0;
-  margin-bottom: 40px;
+
+  display: block !important;
+  margin: 100px auto 0 auto !important;
+  text-align: center !important;
+  width: fit-content !important;
 }
 
 .resume-link:hover {
   background-color: #cfe4f3;
 }
 
+.resume-video {
+  max-width: 190px;
+  margin: 0 auto;
+}
+
 .resume-video video {
-  width: 320px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
   border-radius: 12px;
   flex-shrink: 0;
 }
@@ -185,6 +196,11 @@ footer {
   font-size: 14px;
   margin-top: 40px;
   border-top: 1px solid #ccc;
+
+  background-image: url('footback.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .welcome {
@@ -204,7 +220,7 @@ footer {
 }
 
 .reflection p:first-of-type::first-letter {
-  font-size: 2.2em;
+  font-size: 35px;
   font-weight: bold;
   color: #1F4E79;
   float: left;
@@ -214,7 +230,7 @@ footer {
 }
 
 .reflection p:not(:first-of-type) {
-  text-indent: 2em;
+  text-indent: 32px;
 }
 
 .reflection-header {
@@ -339,4 +355,647 @@ h3 {
   .resume-link {
     margin: 0 auto;      
   }
+}
+
+.education-quote-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.education-section,
+.quote-section {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.education-header,
+.quote-header {
+  text-align: center;
+  margin-bottom: 12px;
+  color: #497BAE;
+}
+
+.education-list {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.quote-section blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  background-color: #f0f8ff;
+  border-left: 4px solid #497BAE;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .education-quote-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .education-section,
+  .quote-section {
+    max-width: 100%;
+  }
+}
+
+.print-only {
+  display: none; 
+}
+
+@media print {
+  body {
+    margin: 1in;
+    font-family: 'Times New Roman', Times, serif !important;
+    color: black !important;
+    background: none !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+  }
+
+  .site-header,
+  .site-title,
+  .site-logo,
+  .menu-icon,
+  #menu-toggle,
+  .nav-bar,
+  video,
+  img,
+  .resume,
+  .resume-header-bar,
+  .resume-header,
+  .resume-intro,
+  .resume-link,
+  .resume-content,
+  .reflection-header,
+  .headshot-wrapper,
+  .section-header {
+    display: none !important;
+  }
+
+  h1.print-only {
+    display: block !important;
+    font-size: 32px !important;
+    margin: 0 0 16px 0 !important;
+    font-family: 'Times New Roman', Times, serif !important;
+    color: black !important;
+  }
+
+  .print-only p {
+    text-align: center !important;
+    font-family: 'Times New Roman', Times, serif !important;
+  }
+}
+
+.resume-link {
+  border: 2px solid #497BAE;
+  background-color: #f9fcff;
+  padding: 14px 28px;
+  color: #497BAE;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+  margin-bottom: 40px;
+}
+
+.resume-link:hover {
+  background-color: #cfe4f3;
+}
+
+.resume-video video {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.resume-content.spaced {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+}
+
+.icon {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.welcome {
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto 20px auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.reflection {
+  padding: 30px;
+  background-color: #fdfdfd;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.reflection p:first-of-type::first-letter {
+  font-size: 35px;
+  font-weight: bold;
+  color: #1F4E79;
+  float: left;
+  line-height: 1;
+  margin-right: -6px;
+  margin-top: 4px;
+}
+
+.reflection p:not(:first-of-type) {
+  text-indent: 32px;
+}
+
+.reflection-header {
+  font-size: 32px;
+  text-align: center;
+  color: #1F4E79;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #B0D4F1;
+  padding-bottom: 10px;
+}
+
+.signature {
+  display: block;
+  margin: 40px auto 0 auto;
+  max-width: 300px;
+  height: auto;
+}
+
+.italic-header {
+  text-align: center;
+  font-style: italic;
+}
+
+h3 {
+  color: #1F4E79;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-title h1 {
+    font-size: 28px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 16px;
+  }
+
+   p {
+    margin-bottom: 12px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 6.5px;
+    margin-bottom: 6.5px;
+  }
+
+  ul li {
+    margin-bottom: 6px;
+  }
+
+  .headshot-wrapper {
+    margin: 0 auto;
+  }
+
+  .headshot {
+    max-width: 260px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .section-header {
+    font-size: 26px;
+  }
+
+  .resume-content.spaced {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .resume-link {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .quote blockquote {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .reflection p {
+    padding: 0 16px;
+  }
+
+  .signature {
+    max-width: 200px;
+  }
+}
+
+.mobile-toggle {
+  display: none;
+  background-color: #497BAE;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+
+#menu-toggle,
+.menu-icon {
+  display: none !important;;
+}
+#menu-toggle {
+  display: none !important;  /* --- https://www.w3schools.com/css/css_important.asp --- */
+}
+
+@media (max-width: 768px) {
+  #menu-toggle,
+  .menu-icon,
+  .mobile-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-content.spaced {
+    align-items: center;
+    text-align: center;   
+  }
+
+  .resume-video,
+  .resume-link {
+    margin: 0 auto;      
+  }
+}
+
+.education-quote-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.education-section,
+.quote-section {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.education-header,
+.quote-header {
+  text-align: center;
+  margin-bottom: 12px;
+  color: #497BAE;
+}
+
+.education-list {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.quote-section blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  background-color: #f0f8ff;
+  border-left: 4px solid #497BAE;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .education-quote-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .education-section,
+  .quote-section {
+    max-width: 100%;
+  }
+}
+
+.print-only {
+  display: none; 
+}
+
+@media print {
+  body {
+    margin: 1in;
+    font-family: 'Times New Roman', Times, serif !important;
+    color: black !important;
+    background: none !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+  }
+
+  .site-header,
+  .site-title,
+  .site-logo,
+  .menu-icon,
+  #menu-toggle,
+  .nav-bar,
+  video,
+  img,
+  .resume,
+  .resume-header-bar,
+  .resume-header,
+  .resume-intro,
+  .resume-link,
+  .resume-content,
+  .reflection-header,
+  .headshot-wrapper,
+  .section-header {
+    display: none !important;
+  }
+
+  h1.print-only {
+    display: block !important;
+    font-size: 32px!important;
+    margin: 0 0 16px 0 !important;
+    font-family: 'Times New Roman', Times, serif !important;
+    color: black !important;
+  }
+
+  .about-text {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    max-width: 700px !important;
+  }
+
+  .about-text p {
+    margin: 10px 0 !important;
+    padding: 0 !important;
+    text-indent: 0 !important;
+    text-align: center !important;
+  }
+
+  .education-quote-container {
+    margin-top: 20px !important;
+    gap: 20px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    max-width: none !important;
+    display: block !important;
+  }
+
+  .education-header,
+  .quote-header {
+    font-size: 17px!important;
+    font-weight: bold !important;
+    margin: 16px 0 6px 0 !important;
+  }
+
+  .education-list li {
+    margin: 6px 0 !important;
+  }
+
+  .quote-section blockquote {
+    padding: 6px 10px !important;
+    margin: 6px 0 12px 0 !important;
+    max-width: 100% !important;
+    border-left: none !important;
+    background: none !important;
+    font-style: italic !important;
+  }
+
+  .education-section,
+  .quote-section {
+    page-break-inside: avoid !important;
+    page-break-before: auto !important;
+    page-break-after: auto !important;
+  }
+
+  footer {
+    display: block !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: black !important;
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 13px !important;
+    text-align: center !important;
+    padding: 20px 0 0 0 !important;
+    margin-top: 30px !important;
+  }
+
+  * {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    color: black !important;
+  }
+
+  html, body {
+    page-break-inside: avoid !important;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote {
+    font-family: 'Times New Roman', Times, serif !important;
+    margin: 6px 0 !important;
+    page-break-inside: avoid !important;
+  }
+}
+
+footer .icon {
+  transition: transform 0.3s ease;
+  cursor: pointer; 
+}
+
+footer .icon:hover {
+  transform: scale(1.4);
+}
+
+main.projects-main {
+  max-width: 1250px; 
+  margin: 0 auto;
+  padding: 40px 12px;
+  text-align: center;
+}
+
+.project-section h3,
+.project-section h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: #2a2a2a;
+  text-align: center;
+}
+
+.project-section h3 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.project-section h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.project-section p,
+.project-section a {
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  color: #333333;
+}
+
+.project-section p {
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+
+.project-section a:hover {
+  text-decoration: underline;
+}
+
+.artifact {
+  width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+  border: 1px solid #cccccc;
+  margin: 16px 0;
+  border-radius: 8px;
+}
+
+.main-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #1F4E79; 
+}
+
+.project-section {
+  background-color: #EAF3FB;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 40px;
+  box-shadow: 0 3px 6px rgba(31, 78, 121, 0.15);
+  text-align: left;
+}
+
+.project-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #1F4E79;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 29px;
+}
+
+.project-section p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #222;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.project-section ul {
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.project-section ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  main.projects-main {
+    padding: 20px 12px;
+  }
+
+  .project-section {
+    padding: 16px;
+  }
+
+  .project-section h2 {
+    font-size: 24px;
+  }
+
+  .project-section p,
+  .project-section ul li {
+    font-size: 15px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1F4E79 !important;
+}
+
+.header-icon {
+  height: 70px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.main-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.header-icon-left {
+  height: 50px;
+  width: auto;
 }
