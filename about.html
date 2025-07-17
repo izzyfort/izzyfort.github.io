@@ -8,7 +8,7 @@ School/Term:  University of Missouri, Summer 2025
 
 Developed: June 14, 2025
 
-Tested:  July 6, 2025 on Google Chrome and Safari-->
+Tested:  July 17, 2025 on Google Chrome and Safari-->
 
 <!DOCTYPE html>
 <html lang="en-US">
@@ -16,8 +16,10 @@ Tested:  July 6, 2025 on Google Chrome and Safari-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" type="text/css">
   <link rel="stylesheet" href="nav.css" type="text/css">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
   <input type="checkbox" id="menu-toggle">
@@ -38,19 +40,23 @@ Tested:  July 6, 2025 on Google Chrome and Safari-->
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="Reflection.html">Reflection</a></li>
-    <li><a href="#contact.html">Contact</a></li>
+    <li><a href="contact.html">Contact</a></li>
     <li><a href="projects.html">Projects</a>
       <ul>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
+        <li><a href="projects.html#research-poster">Research Poster</a></li>
+        <li><a href="projects.html#policy-video">Policy Video</a></li>
+        <li><a href="projects.html#healing-room">Healing Waiting Room</a></li>
       </ul>
     </li>
   </ul>
 </nav>
 
   <main class="about">
-    <h2 class="section-header">About Me</h2>
+    <div class="main-header-container">
+      <img src="about-icon.png" alt="About Icon" class="header-icon-left">
+      <h2 class="section-header">About Me</h2>
+    </div>
+    <h1 class="print-only">Izzy Forthaus</h1>
 
     <div class="about-content">
       <div class="headshot-wrapper">
@@ -62,10 +68,23 @@ Tested:  July 6, 2025 on Google Chrome and Safari-->
       </div>
     </div>
 
-    <section class="quote">
-      <h2>Favorite Quote</h2>
-      <blockquote>“To care for those who once cared for us is one of the highest honors.” -Tia Walker</blockquote>
-    </section>
+
+  <div class="education-quote-container">
+  <section class="education-section">
+    <h2 class="education-header">Education</h2>
+    <ul class="education-list">
+      <li>Bachelor of Health Sciences, Leadership and Policy – University of Missouri</li>
+      <li>Minor in Business – University of Missouri</li>
+      <li>Certificate in Information Systems and Technology – University of Missouri</li>
+    </ul>
+  </section>
+
+  <section class="quote-section">
+    <h2 class="quote-header">Favorite Quote</h2>
+    <blockquote>
+      "To care for those who once cared for us is one of the highest honors.” -Tia Walker
+    </blockquote>
+  </section>
 
     <section class="resume">
       <div class="resume-header-bar full-width">
@@ -80,11 +99,20 @@ Tested:  July 6, 2025 on Google Chrome and Safari-->
         </div>
       </div>
     </section>
+    </div>
   </main>
 
-  <footer>
-    Izzy Forthaus | iofbmn@umsystem.edu <br>
+
+ <footer>
+  <p>
+    <img src="phone.png" alt="Phone Icon" class="icon">
+    1+888-888-8888
+  </p>
+  <p>
+    <img src="email.png" alt="Email Icon" class="icon">
+    <a href="mailto:iofbmn@umsystem.edu">Izzy Forthaus</a> | iofbmn@umsystem.edu
+  </p>
+  <p>
     © 2025 Izzy Forthaus. All rights reserved.
-  </footer>
-</body>
-</html>
+  </p>
+</footer>

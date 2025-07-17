@@ -8,7 +8,7 @@ School/Term:  University of Missouri, Summer 2025
 
 Developed: June 26, 2025
 
-Tested:  July 13, 2025 on Google Chrome and Safari-->
+Tested:  July 17, 2025 on Google Chrome and Safari-->
 
 <!DOCTYPE html>
 <html lang="en-US">
@@ -18,12 +18,12 @@ Tested:  July 13, 2025 on Google Chrome and Safari-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" type="text/css">
-  <link rel="stylesheet" href="style.css" type="text/css">
   <link rel="stylesheet" href="nav.css" type="text/css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body>
+  <div class="left-column"></div>
   <input type="checkbox" id="menu-toggle">
   <label for="menu-toggle" class="menu-icon">&#9776;</label>
 
@@ -41,12 +41,12 @@ Tested:  July 13, 2025 on Google Chrome and Safari-->
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="Reflection.html">Reflection</a></li>
-      <li><a href="#contact.html">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
       <li><a href="projects.html" class="active">Projects</a>
         <ul>
-          <li><a href="#research-poster">Research Poster</a></li>
-          <li><a href="#policy-video">Policy Video</a></li>
-          <li><a href="#healing-room">Healing Waiting Room</a></li>
+          <li><a href="projects.html#research-poster">Research Poster</a></li>
+          <li><a href="projects.html#policy-video">Policy Video</a></li>
+          <li><a href="projects.html#healing-room">Healing Waiting Room</a></li>
         </ul>
       </li>
     </ul>
@@ -57,6 +57,55 @@ Tested:  July 13, 2025 on Google Chrome and Safari-->
     <img src="projects-icon.png" alt="Projects Icon" class="header-icon">
     Notable Projects
     </h2>
+
+    <h2 class="table-title">Health Sciences Project Overview</h2>
+
+<figure>
+  
+  <div class="table-container" role="region" aria-labelledby="projectTable" tabindex="0">
+    <table id="projectTable">
+
+      <caption>A summary of my key academic projects:</caption>
+      <thead>
+        <tr>
+          <th scope="col">Project Title</th>
+        <th scope="col">Focus Area</th>
+        <th scope="col">Course</th>
+        <th scope="col">Semester</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Postpartum Depression Literature Review Poster</td>
+          <td>Health Education, Research and analysis, Patient Care </td>
+          <td> Introduction to The Research Process and Evidence Base -Writing Intensive</td>
+          <td> Spring 2025</td>
+        </tr>
+        <tr>
+          <td>The Impact of the Fee-For-Service Payment Method on Patient Care</td>
+          <td>Healthcare Policy, Economics, Quality of Care</td>
+          <td>Healthcare Management</td>
+          <td>Fall 2024</td>
+        </tr>
+        <tr>
+          <td>The Healing Waiting Room</td>
+          <td> Health Promotion, Health Environment Design, Patient-Centered Care</td>
+          <td>Humanism and Health Literacy</td>
+          <td>Fall 2024</td>
+        </tr>
+
+         </tbody>
+
+        <tfoot>
+      <tr>
+         <tr>
+    <td colspan="4">&nbsp;</td>
+      </tr>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+</figure>
 
     <section id="research-poster" class="project-section">
       <h3>Competency 1: Health Education</h3>
@@ -86,6 +135,7 @@ Tested:  July 13, 2025 on Google Chrome and Safari-->
 
       <hr>
     </section>
+    <div class="right-column"></div>
   </main>
 
   <footer>
