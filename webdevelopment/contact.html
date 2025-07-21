@@ -1,14 +1,14 @@
 <!--Title: Template
 
-Use:  To provide a foundation for my webpages/make creating my website easier
+Use:  To allow users to contact me
 
 Author:  Izzy Forthaus
 
 School/Term:  University of Missouri, Summer 2025
 
-Developed: June 14, 2025
+Developed: July 17, 2025
 
-Tested:  June 29, 2025 on Google Chrome and Safari-->
+Tested:  July 17, 2025 on Google Chrome and Safari-->
 
 <!DOCTYPE html>
 <html lang="en-US">
@@ -22,6 +22,7 @@ Tested:  June 29, 2025 on Google Chrome and Safari-->
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
+
   <input type="checkbox" id="menu-toggle">
   <label for="menu-toggle" class="menu-icon">&#9776;</label>
 
@@ -33,14 +34,12 @@ Tested:  June 29, 2025 on Google Chrome and Safari-->
   </header>
 
   <nav class="nav-bar">
-  <input type="checkbox" id="nav-toggle" class="nav-toggle">
-  <label for="nav-toggle" class="nav-toggle-label">☰ Menu</label>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">☰ Menu</label>
 
-  <ul class="desktop-menu">
+    <ul class="desktop-menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="Reflection.html">Reflection</a></li>
-    <li><a href="contact.html">Contact</a></li>
     <li><a href="projects.html">Projects</a>
       <ul>
         <li><a href="projects.html#research-poster">Research Poster</a></li>
@@ -48,44 +47,49 @@ Tested:  June 29, 2025 on Google Chrome and Safari-->
         <li><a href="projects.html#healing-room">Healing Waiting Room</a></li>
       </ul>
     </li>
+    <li><a href="Reflection.html">Reflection</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
-</nav>
+  </nav>
+
   <main>
-     <h1 class="chat-heading">Let's Chat!</h1>
-     <h6 class="subheading">Thanks for visiting my portfolio! Whether you're curious about my work, want to discuss healthcare and leadership, or simply want to say hello, I’d love to hear from you!</h6>
+    <h1 class="chat-heading">Let's Chat!</h1>
+    <h6 class="subheading">
+      Thanks for visiting my portfolio! Whether you're curious about my work, want to discuss healthcare and leadership, or simply want to say hello, I’d love to hear from you!
+    </h6>
+
     <form 
       action="mailto:iofbmn@umsystem.edu?Subject=Contact%20Form%20Submission" 
       method="post" 
       enctype="text/plain"
     >
       <label for="firstName">First Name:</label>
-      <input type="text" id="firstName" name="FirstName" placeholder="Enter your first name" required autofocus />
+      <input type="text" id="firstName" name="FirstName" placeholder="Enter your first name" required>
 
       <label for="lastName">Last Name:</label>
-      <input type="text" id="lastName" name="LastName" placeholder="Enter your last name" required />
+      <input type="text" id="lastName" name="LastName" placeholder="Enter your last name" required>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="Email" placeholder="Enter your email address" required />
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="Email" placeholder="you@example.com" required>
 
       <label for="message">Message:</label>
       <textarea id="message" name="Message" placeholder="Type your message here" required></textarea>
 
-      <input type="submit" value="Send" />
+      <input type="submit" value="Send">
     </form>
   </main>
 
   <footer>
-  <p>
-    <img src="phone.png" alt="Phone Icon" class="icon">
-    1+888-888-8888
-  </p>
-  <p>
-    <img src="email.png" alt="Email Icon" class="icon">
-    <a href="mailto:iofbmn@umsystem.edu">Izzy Forthaus</a> | iofbmn@umsystem.edu
-  </p>
-  <p>
-    © 2025 Izzy Forthaus. All rights reserved.
-  </p>
-</footer>
+    <p>
+      <img src="phone.png" alt="Phone Icon" class="icon">
+      1+888-888-8888
+    </p>
+    <p>
+      <img src="email.png" alt="Email Icon" class="icon">
+      <a href="mailto:iofbmn@umsystem.edu">Izzy Forthaus</a> | iofbmn@umsystem.edu
+    </p>
+    <p>© 2025 Izzy Forthaus. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
