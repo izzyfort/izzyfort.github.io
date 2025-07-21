@@ -1,5 +1,3 @@
-CSS
-
 html, body {
   margin: 0;
   padding: 0;
@@ -229,7 +227,7 @@ footer {
   color: #1F4E79;
   float: left;
   line-height: 1;
-  margin-right: -30px;
+  margin-right: 10px;
   margin-top: -5px;
 }
 
@@ -618,107 +616,116 @@ input[type="submit"]:hover {
   background-color: #357ABD;
 }
 
+a:focus,
+button:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="submit"]:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid #4A90E2;
+  outline-offset: 2px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.3);
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input[type="text"]:focus:not(:focus-visible),
+input[type="email"]:focus:not(:focus-visible),
+input[type="submit"]:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.about-text p,
+.reflection p,
+.welcome {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width: 768px) {
   .site-header {
     flex-direction: column;
     align-items: flex-start;
   }
-
   .site-title h1 {
     font-size: 28px;
   }
-
   .about-content {
     flex-direction: column;
     gap: 30px;
     padding: 0 16px;
   }
-
   .headshot-wrapper {
     margin: 0 auto;
   }
-
   .headshot {
     max-width: 260px;
   }
-
   .about-text {
     max-width: 100%;
   }
-
   .section-header {
     font-size: 26px;
   }
-
   .resume-content.spaced {
     flex-direction: column;
     gap: 40px;
     align-items: center;
     text-align: center;
   }
-
   .resume-link {
     font-size: 16px;
     padding: 12px 20px;
     margin: 0 auto;
   }
-
   .quote blockquote {
     margin-left: 16px;
     margin-right: 16px;
   }
-
   .reflection p {
     padding: 0 16px;
   }
-
   .signature {
     max-width: 200px;
   }
-
   #menu-toggle,
   .menu-icon,
   .mobile-toggle {
     display: block;
   }
-
   .desktop-menu li ul {
     display: none !important;
   }
-
   .resume-video {
     margin: 0 auto;
   }
-
   .education-quote-container {
     flex-direction: column;
     align-items: center;
   }
-
   .education-section,
   .quote-section {
     max-width: 100%;
   }
-
   main.projects-main {
     padding: 20px 12px;
   }
-
   .project-section {
     padding: 16px;
   }
-
   .project-section h2 {
     font-size: 24px;
   }
-
   .project-section p,
   .project-section ul li {
     font-size: 15px;
   }
-
   table {
-    min-width: unset;
     font-size: 14px;
   }
   thead th,
@@ -728,10 +735,28 @@ input[type="submit"]:hover {
   .table-caption {
     font-size: 16px;
   }
-
   form {
     margin: 16px;
     padding: 16px;
+  }
+  html, body {
+    font-size: 17px;
+  }
+  .site-title span {
+      font-size: 16px;
+  }
+  .main-header {
+    font-size: 34px;
+  }
+  .chat-heading {
+    font-size: 1.6rem;
+  }
+  .reflection-header,
+  .resume-header {
+    font-size: 28px;
+  }
+  .quote h2 {
+    font-size: 22px;
   }
 }
 
@@ -746,6 +771,54 @@ input[type="submit"]:hover {
   thead th,
   tbody td {
     padding: 4px 6px;
+  }
+  html, body {
+    font-size: 15px;
+  }
+  .site-title h1 {
+    font-size: 24px;
+  }
+  .site-title span {
+      font-size: 14px;
+  }
+  .section-header {
+    font-size: 22px;
+  }
+  .main-header {
+      font-size: 30px;
+  }
+  .chat-heading {
+      font-size: 1.4rem;
+  }
+  .reflection-header,
+  .resume-header {
+      font-size: 24px;
+  }
+  .quote h2 {
+      font-size: 20px;
+  }
+  .resume-link,
+  .btn-view-slides {
+      font-size: 16px;
+  }
+  .subheading, label,
+  input[type="text"], input[type="email"], textarea {
+      font-size: 14px;
+  }
+  .project-section h2 {
+      font-size: 20px;
+  }
+  .project-section h3 {
+      font-size: 22px;
+  }
+  .project-section h4 {
+      font-size: 18px;
+  }
+  .project-section p, .project-section ul li {
+      font-size: 14px;
+  }
+  footer {
+      font-size: 12px;
   }
 }
 
