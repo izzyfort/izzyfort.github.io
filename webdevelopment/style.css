@@ -712,7 +712,24 @@ select:focus:not(:focus-visible) {
   }
   .education-section,
   .quote-section {
-    max-width: 100%;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .education-header,
+  .quote-header {
+      text-align: center;
+  }
+  .quote-section blockquote {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .education-list {
+      text-align: center;
+  }
+  .education-list li {
+      text-align: center;
   }
   main.projects-main {
     padding: 20px 12px;
@@ -844,6 +861,16 @@ select:focus:not(:focus-visible) {
   }
   .reflection p {
       padding: 0 5px;
+  }
+  .education-section,
+  .quote-section {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .quote-section blockquote {
+    text-align: center;
+    margin: 0 auto;
   }
 }
 
