@@ -658,7 +658,8 @@ select:focus:not(:focus-visible) {
   .about-content {
     flex-direction: column;
     gap: 30px;
-    padding: 0 16px;
+    padding: 0 10px;
+    align-items: center;
   }
   .headshot-wrapper {
     margin: 0 auto;
@@ -668,6 +669,7 @@ select:focus:not(:focus-visible) {
   }
   .about-text {
     max-width: 100%;
+    text-align: center;
   }
   .section-header {
     font-size: 26px;
@@ -688,7 +690,7 @@ select:focus:not(:focus-visible) {
     margin-right: 16px;
   }
   .reflection p {
-    padding: 0 16px;
+    padding: 0 10px;
   }
   .signature {
     max-width: 200px;
@@ -758,6 +760,20 @@ select:focus:not(:focus-visible) {
   .quote h2 {
     font-size: 22px;
   }
+  main {
+    padding: 20px 10px;
+  }
+  .about-text p,
+  .reflection p,
+  .welcome {
+    max-width: unset;
+  }
+  .welcome {
+      text-align: center;
+  }
+  .about-text p {
+      text-align: unset;
+  }
 }
 
 @media (max-width: 480px) {
@@ -819,6 +835,15 @@ select:focus:not(:focus-visible) {
   }
   footer {
       font-size: 12px;
+  }
+  main {
+      padding: 15px 5px;
+  }
+  .about-content {
+      padding: 0 5px;
+  }
+  .reflection p {
+      padding: 0 5px;
   }
 }
 
